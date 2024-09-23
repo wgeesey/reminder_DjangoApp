@@ -4,6 +4,8 @@ As of right now, it is in its' infant stage. Simple Django app, intended to be a
 create, update, delete, review reminders. These reminders can be of any kind, and emails will *eventually* be 
 able to be forwarded to the user. 
 
+## Not deployable...yet, only works on current machine as of now.
+
 ### Current progress
 Initial shell is in place.
 Log in works using django.contrib.auth.urls
