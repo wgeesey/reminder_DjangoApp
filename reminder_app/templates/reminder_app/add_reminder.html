@@ -1,0 +1,16 @@
+<html lang="en">
+<h2>Add Reminder</h2>
+   <form method="post">
+       {% csrf_token %}
+       <label for="title">Title:</label>
+       <input type="text" name="title" required>
+       <label for="description">Description:</label>
+       <textarea name="description"></textarea>
+       <label for="reminder_time">Reminder Time:</label>
+       <input type="datetime-local" name="reminder_time" required>
+       <label for="interval">Interval (Days):</label>
+       <input type="number" name="interval" required>
+       <button type="submit">Add</button>
+   </form>
+
+</html>

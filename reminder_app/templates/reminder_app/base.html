@@ -1,0 +1,12 @@
+    <p>
+        <a href="{% url 'reminder_app:index' %}">Reminder Tracker</a>  -
+        <a href="{% url 'reminder_app:reminder_list' %}">Reminder List</a>  -
+        {% if user.is_authenticated %}
+            Hello, {{ user.username }}.
+        {% else %}
+            <a href="{% url 'accounts:login' %}">Log in</a>
+        {% endif %}
+
+    </p>
+
+{% block content %}{% endblock content %}

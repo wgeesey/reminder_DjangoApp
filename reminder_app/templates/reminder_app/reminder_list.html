@@ -1,0 +1,9 @@
+<html>
+   <h2>Your Reminder List</h2>
+   <ul>
+       {% for reminder in reminder_app %}
+           <li>{{ reminder.title }} - {{ reminder.reminder_time }}</li>
+       {% endfor %}
+   </ul>
+   <a href="{% url 'reminder_app:add_reminder' %}">Add Reminder</a>
+</html>
