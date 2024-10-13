@@ -3,8 +3,15 @@
         <a href="{% url 'reminder_app:reminder_list' %}">Reminder List</a>  -
         {% if user.is_authenticated %}
             Hello, {{ user.username }}.
+            <a href="#" onclick="event.preventDefault(); document.getElementById('logout-form').submit();" style="color: blue; text-decoration: underline;">
+             Logout
+            </a>
+            <form id="logout-form" method="post" action="{% url 'accounts:logout' %}" style="display: none;">
+              {% csrf_token %}
+            </form>
         {% else %}
-            <a href="{% url 'accounts:login' %}">Log in</a>
+            <a href="{% url 'accounts:login' %}">Log in</a> -
+            <a href="{% url 'accounts:register' %}">Register</a>
         {% endif %}
 
     </p>

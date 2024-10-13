@@ -132,3 +132,4 @@ EMAIL_HOST_USER = '@gmail.com'
 EMAIL_HOST_PASSWORD = ''
 
 LOGIN_REDIRECT_URL = 'reminder_app:index'
+LOGOUT_REDIRECT_URL = 'reminder_app:index'
